@@ -14,10 +14,10 @@ angular.module('ui.bootstrap.progressbar', ['ui.bootstrap.transition'])
     var stackedTypes = angular.isDefined($attrs.stackedTypes) ? $scope.$eval('[' + $attrs.stackedTypes + ']') : progressConfig.stackedTypes;
 
     // Create bar object
-    this.makeBar = function(newBar, oldBar, index) {
+    this.makeBar = function(newBar, oldBar, index, progressType) {
         var newValue = (angular.isObject(newBar)) ? newBar.value : (newBar || 0);
         var oldValue =  (angular.isObject(oldBar)) ? oldBar.value : (oldBar || 0);
-        var type = (angular.isObject(newBar) && angular.isDefined(newBar.type)) ? newBar.type : (autoType) ? getStackedType(index || 0) : null;
+        var type = (angular.isObject(newBar) && angular.isDefined(newBar.type)) ? newBar.type : angular.isDefined(progressType) ? progressType : (autoType) ? getStackedType(index || 0) : null;
 
         return {
             from: oldValue,
@@ -65,7 +65,7 @@ angular.module('ui.bootstrap.progressbar', ['ui.bootstrap.transition'])
                     }
                 } else {
                     // Simple bar
-                    controller.addBar(controller.makeBar(newValue, oldValue));
+                    controller.addBar(controller.makeBar(newValue, oldValue, 0, scope.$eval(attrs.type)));
                 }
             }, true);
 
