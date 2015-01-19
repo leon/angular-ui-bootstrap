@@ -1,8 +1,24 @@
 {
-  "author": "https://github.com/angular-ui/bootstrap/graphs/contributors",
-  "name": "angular-ui-bootstrap",
+  "name": "angular-bootstrap",
   "version": "0.13.0-SNAPSHOT",
+  "description": "The companion suite(s) to the AngularJS framework.",
+  "keywords": ["angular", "angular-ui", "bootstrap"],
   "homepage": "http://angular-ui.github.io/bootstrap/",
+  "bugs": {
+    "url" : "https://github.com/angular-ui/bootstrap/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular-ui/bootstrap.git"
+  },
+  "license": "MIT",
+  "contributors": "https://github.com/angular-ui/bootstrap/graphs/contributors",
+  "main": "dist/ui-bootstrap-tpls.min.js",
+  "files": [
+    "src",
+    "template",
+    "dist"
+  ],
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -19,6 +35,5 @@
     "semver": "~2.2.0",
     "shelljs": "~0.2.0",
     "grunt-ddescribe-iit": "0.0.4"
-  },
-  "license": "MIT"
+  }
 }
