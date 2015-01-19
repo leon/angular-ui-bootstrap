@@ -13,7 +13,7 @@
   },
   "license": "MIT",
   "contributors": "https://github.com/angular-ui/bootstrap/graphs/contributors",
-  "main": "dist/ui-bootstrap-tpls.min.js",
+  "main": "dist/ui-bootstrap-tpls.js",
   "files": [
     "src",
     "template",
